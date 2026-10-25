@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120E12">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="A personal invitation for Kim.">
+<meta property="og:title" content="For Kim ♡">
+<meta property="og:description" content="A personal invitation for Kim.">
+<meta property="og:type" content="website">
+<title>For Kim ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="app" id="app">
+    <!-- Screen 1 -->
+    <section class="screen" id="screen-1" aria-labelledby="h-invite" tabindex="-1">
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your letter">
+          <div class="env-back"></div>
+          <div class="env-letter" aria-hidden="true">
+            <p class="letter-visible-note">You sleepy? Sorry, na-busy lang ako kanina :)</p>
+            <span class="env-letter-text">For Kim ♡</span>
+          </div>
+          <div class="env-pocket">
+            <div class="env-flap"></div>
+          </div>
+          <svg class="env-sprig" viewBox="0 0 40 40" aria-hidden="true">
+            <g fill="none" stroke="#9bb8a0" stroke-width="1" stroke-linecap="round">
+              <path d="M6 34 Q12 24 20 18 Q28 12 34 8" />
+              <path d="M14 26 Q18 22 16 18" />
+              <path d="M22 20 Q26 16 24 12" />
+              <path d="M30 14 Q33 10 31 7" />
+            </g>
+          </svg>
+          <div class="env-seal">
+            <svg class="seal-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+          </div>
+          <p class="env-for">for Kim</p>
+        </div>
+      </div>
+
+      <div class="invitation-card" id="invitation-card" hidden>
+        <h1 id="h-invite" class="title serif">Hey Kim, I want to take you out on a date. Would you say yes? <span class="heart">♡</span></h1>
+        <div class="actions">
+          <button class="btn btn-primary" id="btn-yes" type="button">Yes</button>
+          <button class="btn btn-ghost" id="btn-no" type="button">No</button>
+        </div>
+        <div class="cat-stage" id="cat-stage" aria-hidden="true">
+          <img class="cat-image" id="cat-image" src="assets/catpoint.png" alt="" width="320" height="240" decoding="async" />
+        </div>
+        <p class="decline-msg" id="decline-msg" role="status" aria-live="polite" hidden>That's okay, Kim. No pressure at all. ♡</p>
+        <button class="btn btn-link" id="btn-back-letter" type="button" hidden>Back to the letter</button>
+      </div>
+    </section>
+
+    <!-- Screen 2 -->
+    <section class="screen" id="screen-2" aria-labelledby="h-ideas" tabindex="-1" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">Choose a date idea</p>
+        <h1 id="h-ideas" class="title serif">What sounds lovely to you?</h1>
+      </header>
+      <div class="cards" id="idea-cards" role="radiogroup" aria-label="Date ideas">
+        <button class="idea-card" type="button" data-idea="picnic" aria-pressed="false">
+          <span class="card-illust" aria-hidden="true">
+            <img src="assets/picnic.jpg" alt="" width="736" height="981" loading="lazy" decoding="async" />
+          </span>
+          <span class="card-title serif">Picnic</span>
+          <span class="card-desc">A cute picnic date.</span>
+          <span class="card-check" aria-hidden="true">✓</span>
+        </button>
+        <button class="idea-card" type="button" data-idea="coffee" aria-pressed="false">
+          <span class="card-illust" aria-hidden="true">
+            <img src="assets/cafe.jpg" alt="" width="736" height="1008" loading="lazy" decoding="async" />
+          </span>
+          <span class="card-title serif">Coffee</span>
+          <span class="card-desc">Coffee and good conversation.</span>
+          <span class="card-check" aria-hidden="true">✓</span>
+        </button>
+        <button class="idea-card" type="button" data-idea="yours" aria-pressed="false">
+          <span class="card-illust" aria-hidden="true">
+            <svg viewBox="0 0 150 110" class="idea-illustration">
+              <defs>
+                <linearGradient id="noteGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f7f1e6"/>
+                  <stop offset="1" stop-color="#efe3d0"/>
+                </linearGradient>
+              </defs>
+              <rect x="28" y="18" width="94" height="74" rx="8" fill="url(#noteGrad)" stroke="#c9b99a" stroke-width="1.2"/>
+              <path d="M40 38 h70" stroke="#b9a98a" stroke-width="1" stroke-linecap="round"/>
+              <path d="M40 50 h58" stroke="#b9a98a" stroke-width="1" stroke-linecap="round"/>
+              <path d="M40 62 h46" stroke="#b9a98a" stroke-width="1" stroke-linecap="round"/>
+              <g transform="rotate(-18 118 28)">
+                <rect x="108" y="20" width="6" height="46" rx="3" fill="#c7ae88"/>
+                <polygon points="108,66 114,66 111,74" fill="#c7ae88"/>
+                <rect x="108" y="20" width="6" height="8" rx="2" fill="#9bb8a0"/>
+              </g>
+              <path d="M75 86 c-4 -5 -10 -5 -10 1 c0 5 10 9 10 9 s10 -4 10 -9 c0 -6 -6 -6 -10 -1 z" fill="#9bb8a0"/>
+            </svg>
+          </span>
+          <span class="card-title serif">Your Idea</span>
+          <span class="card-desc">Something you’d love to do together.</span>
+          <span class="card-check" aria-hidden="true">✓</span>
+        </button>
+      </div>
+      <p class="note">I mean, there aren't many spots here in Natividad and I don't have a car yet, so if you have an idea, it would be great.</p>
+
+      <div class="idea-panel" id="suggestion-wrap" aria-hidden="true">
+        <div class="idea-panel-inner">
+          <h2 class="panel-heading serif">What would your perfect date look like?</h2>
+          <p class="panel-support">Somewhere special, something simple, or a little adventure.</p>
+          <label for="suggestion" class="field-label">Your idea</label>
+          <textarea id="suggestion" class="field" maxlength="300" rows="4" placeholder="Maybe a sunset walk, dinner at your favorite place, or…" aria-describedby="sugg-hint sugg-count"></textarea>
+          <div class="chip-row" role="group" aria-label="Suggestion ideas">
+            <button type="button" class="chip" data-suggestion="A sunset walk together, ending somewhere cozy.">Sunset walk</button>
+            <button type="button" class="chip" data-suggestion="Dinner together at a place we both enjoy.">Dinner together</button>
+            <button type="button" class="chip" data-suggestion="Surprise me with something you think I’d love.">Surprise me</button>
+          </div>
+          <div class="field-meta">
+            <span class="hint" id="sugg-hint">Even a simple idea is lovely.</span>
+            <span class="count" id="sugg-count">0 / 300</span>
+          </div>
+          <p class="field-error" id="sugg-error" role="alert" aria-live="polite" hidden></p>
+        </div>
+      </div>
+        <p class="field-error" id="sugg-error" role="alert" aria-live="polite" hidden></p>
+      </div>
+
+      <div class="validation" id="idea-validation" role="alert" aria-live="polite" hidden>Please choose a date idea.</div>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="btn-idea-back" type="button">Back</button>
+        <button class="btn btn-primary" id="btn-idea-next" type="button">Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 3 -->
+    <section class="screen" id="screen-3" aria-labelledby="h-when" tabindex="-1" hidden>
+      <header class="screen-head">
+        <p class="eyebrow">Choose a date and time</p>
+        <h1 id="h-when" class="title serif">When can I see you?</h1>
+        <p class="support">A Saturday or Sunday, from 5 PM onward.</p>
+      </header>
+      <div class="dates" id="dates" role="radiogroup" aria-label="Available weekend dates"></div>
+      <div class="times-wrap">
+        <p class="field-label">Time <span class="muted">(Philippine time)</span></p>
+        <div class="times" id="times" role="radiogroup" aria-label="Available times"></div>
+      </div>
+      <div class="validation" id="sched-validation" role="alert" aria-live="polite" hidden></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="btn-sched-back" type="button">Back</button>
+        <button class="btn btn-primary" id="btn-sched-next" type="button">Next</button>
+      </div>
+    </section>
+
+    <!-- Screen 4 -->
+    <section class="screen" id="screen-4" aria-labelledby="h-review" tabindex="-1" hidden>
+      <header class="screen-head">
+        <h1 id="h-review" class="title serif">Review your date</h1>
+      </header>
+      <div class="summary-card">
+        <div class="summary-row">
+          <span class="summary-label">Date idea</span>
+          <span class="summary-value" id="sum-idea"></span>
+          <button class="link-edit" id="edit-idea" type="button">Edit</button>
+        </div>
+        <div class="summary-row" id="sum-sugg-row" hidden>
+          <span class="summary-label">Your suggestion</span>
+          <span class="summary-value" id="sum-sugg"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Date</span>
+          <span class="summary-value" id="sum-date"></span>
+          <button class="link-edit" id="edit-date" type="button">Edit</button>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Time</span>
+          <span class="summary-value" id="sum-time"></span>
+          <button class="link-edit" id="edit-time" type="button">Edit</button>
+        </div>
+      </div>
+      <div class="validation" id="review-validation" role="alert" aria-live="polite" hidden></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="btn-review-back" type="button">Back</button>
+        <button class="btn btn-primary" id="btn-confirm" type="button">Confirm Date</button>
+      </div>
+    </section>
+
+    <!-- Screen 5 -->
+    <section class="screen" id="screen-5" aria-labelledby="h-final" tabindex="-1" hidden>
+      <div class="celebrate" id="celebrate">
+        <img class="celebration-gif" src="assets/c.gif" alt="" loading="lazy" decoding="async" />
+        <div class="celebrate-card" id="celebrate-card">
+          <p class="eyebrow">It's settled</p>
+          <h1 id="h-final" class="title serif final-text">THEN IT'S A DATE, KIM! ♡
+
+See you there :))
+
+I'm looking forward to spending time with you.</h1>
+        </div>
+        <div class="hearts-layer" id="hearts-layer" aria-hidden="true"></div>
+      </div>
+      <p class="email-status" id="email-status" role="status" aria-live="polite" hidden></p>
+      <div class="actions">
+        <button class="btn btn-primary" id="btn-view-date" type="button">View Our Date</button>
+        <button class="btn btn-ghost" id="btn-edit-plan" type="button">Edit plan</button>
+        <button class="btn btn-ghost" id="btn-retry-email" type="button" hidden>Retry email</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Progress indicator (after accepted) -->
+  <div class="progress" id="progress" hidden aria-hidden="true">
+    <div class="progress-dot" id="p1"></div>
+    <div class="progress-dot" id="p2"></div>
+    <div class="progress-dot" id="p3"></div>
+    <div class="progress-dot" id="p4"></div>
+    <div class="progress-dot" id="p5"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel">
+      <h2 id="modal-title" class="serif">Our Date</h2>
+      <div class="modal-body" id="modal-body"></div>
+      <button class="btn btn-primary" id="modal-close" type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
